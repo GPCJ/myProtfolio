@@ -5,8 +5,8 @@ export default function Career() {
   if (career.length === 0) return null;
 
   return (
-    <section id="career" className="py-24 px-6">
-      <div className="max-w-2xl mx-auto">
+    <section id="career" className="py-12 px-6">
+      <div className="max-w-4xl mx-auto">
         {/* 섹션 헤더 */}
         <p
           className="text-xs mb-3"
@@ -15,7 +15,7 @@ export default function Career() {
           <span style={{ color: "var(--color-accent)" }}>//</span> Career
         </p>
         <h2
-          className="text-2xl font-bold mb-12"
+          className="text-3xl font-bold mb-8"
           style={{ color: "var(--text-primary)" }}
         >
           이력
@@ -41,7 +41,7 @@ export default function Career() {
 
                 {/* 날짜 */}
                 <p
-                  className="text-xs mb-1"
+                  className="text-sm mb-1"
                   style={{
                     color: "var(--text-muted)",
                     fontFamily: "var(--font-jetbrains)",
@@ -52,7 +52,7 @@ export default function Career() {
 
                 {/* 회사/학교 + 역할 */}
                 <p
-                  className="text-sm font-semibold mb-1"
+                  className="text-base font-semibold mb-1"
                   style={{ color: "var(--text-primary)" }}
                 >
                   {item.company}
@@ -67,7 +67,7 @@ export default function Career() {
                 {/* 설명 */}
                 {item.description && (
                   <p
-                    className="text-sm leading-relaxed"
+                    className="text-base leading-relaxed"
                     style={{ color: "var(--text-secondary)" }}
                   >
                     {item.description}

@@ -1,13 +1,14 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { ExternalLink, GitBranch } from "lucide-react";
 import { projects } from "@/data/projects";
 import FadeInSection from "@/components/ui/FadeInSection";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6">
-      <div className="max-w-2xl mx-auto">
+    <section id="projects" className="py-12 px-6">
+      <div className="max-w-4xl mx-auto">
         {/* 섹션 헤더 */}
         <p
           className="text-xs mb-3"
@@ -16,7 +17,7 @@ export default function Projects() {
           <span style={{ color: "var(--color-accent)" }}>//</span> Projects
         </p>
         <h2
-          className="text-2xl font-bold mb-12"
+          className="text-3xl font-bold mb-8"
           style={{ color: "var(--text-primary)" }}
         >
           프로젝트
@@ -36,14 +37,17 @@ export default function Projects() {
 }
 
 function ProjectCard({ project }: { project: (typeof projects)[number] }) {
+  const router = useRouter();
+
   return (
     <div
-      className="flex flex-col p-5 transition-all duration-200 group"
+      className="flex flex-col p-6 transition-all duration-200 cursor-pointer"
       style={{
         backgroundColor: "var(--bg-card)",
         border: "1px solid var(--border-color)",
         borderRadius: "6px",
       }}
+      onClick={() => router.push(`/projects/${project.slug}`)}
       onMouseEnter={(e) => {
         e.currentTarget.style.borderColor = "var(--color-accent-border)";
         e.currentTarget.style.boxShadow = "0 0 16px var(--color-accent-dim)";
@@ -55,7 +59,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
     >
       {/* 제목 */}
       <h3
-        className="text-base font-semibold mb-3"
+        className="text-lg font-semibold mb-3"
         style={{ color: "var(--text-primary)", fontFamily: "var(--font-jetbrains)" }}
       >
         {project.title}
@@ -63,7 +67,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
 
       {/* 설명 */}
       <p
-        className="text-sm leading-relaxed mb-4 flex-1"
+        className="text-base leading-relaxed mb-4 flex-1"
         style={{ color: "var(--text-secondary)" }}
       >
         {project.description}
@@ -97,6 +101,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs transition-colors duration-150"
             style={{ color: "var(--text-muted)", fontFamily: "var(--font-jetbrains)" }}
+            onClick={(e) => e.stopPropagation()}
             onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-accent)")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
           >
@@ -111,6 +116,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 text-xs transition-colors duration-150"
             style={{ color: "var(--text-muted)", fontFamily: "var(--font-jetbrains)" }}
+            onClick={(e) => e.stopPropagation()}
             onMouseEnter={(e) => (e.currentTarget.style.color = "var(--color-accent)")}
             onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}
           >

@@ -10,14 +10,18 @@ export const skills: SkillCategory[] = [
   },
   {
     category: "Frontend",
-    items: ["React", "Next.js", "Vite", "Tailwind CSS", "shadcn/ui"],
+    items: ["React", "Next.js", "Tailwind CSS", "shadcn/ui"],
   },
   {
-    category: "State / Auth",
-    items: ["Zustand", "React Router", "JWT", "Google OAuth2"],
+    category: "State",
+    items: ["Zustand"],
   },
   {
-    category: "API / Tools",
-    items: ["Axios", "MSW", "Docker", "Vercel", "AWS EC2"],
+    category: "HTTP",
+    items: ["Axios"],
+  },
+  {
+    category: "Deploy",
+    items: ["Vercel"],
   },
 ];
