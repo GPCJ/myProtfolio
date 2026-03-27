@@ -9,8 +9,21 @@
   --color-accent-border: rgba(0, 255, 136, 0.3);
   --text-primary: #e5e5e5;
   --text-secondary: #888888;
-  --text-muted: #6b6b6b;
+  --text-muted: #767676;
   --border-color: #1f1f1f;
+}
+
+:root[data-theme="light"] {
+  --bg-primary: #f0f2f5;
+  --bg-secondary: #e8eaed;
+  --bg-card: #ffffff;
+  --color-accent: #006644;
+  --color-accent-dim: rgba(0, 102, 68, 0.12);
+  --color-accent-border: rgba(0, 102, 68, 0.35);
+  --text-primary: #0f0f0f;
+  --text-secondary: #4a4a4a;
+  --text-muted: #6b6b6b;
+  --border-color: #d0d0d0;
 }
 
 @theme inline {

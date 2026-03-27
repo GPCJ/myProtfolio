@@ -48,7 +48,6 @@ export default function Skills() {
                         fontFamily: "var(--font-jetbrains)",
                         color: "var(--color-accent)",
                         backgroundColor: "var(--color-accent-dim)",
-                        border: "1px solid var(--color-accent-border)",
                         borderRadius: "3px",
                       }}
                     >
