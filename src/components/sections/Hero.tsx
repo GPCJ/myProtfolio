@@ -67,7 +67,6 @@ export default function Hero() {
         transition={{ duration: 0.55, delay: 0.2 }}
         className="text-5xl lg:text-6xl font-bold mb-5 tracking-tight"
         style={{
-          fontFamily: 'var(--font-jetbrains)',
           color: 'var(--text-primary)',
         }}
       >
