@@ -1,5 +1,3 @@
-"use client";
-
 import { GitBranch, Mail, BookOpen } from "lucide-react";
 import { hero } from "@/data/hero";
 

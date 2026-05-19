@@ -1,6 +1,4 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import { useNavigate } from "react-router-dom";
 import { ExternalLink, GitBranch } from "lucide-react";
 import { projects } from "@/data/projects";
 import FadeInSection from "@/components/ui/FadeInSection";
@@ -37,7 +35,7 @@ export default function Projects() {
 }
 
 function ProjectCard({ project }: { project: (typeof projects)[number] }) {
-  const router = useRouter();
+  const navigate = useNavigate();
 
   return (
     <div
@@ -47,7 +45,7 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
         border: "1px solid var(--border-color)",
         borderRadius: "6px",
       }}
-      onClick={() => router.push(`/projects/${project.slug}`)}
+      onClick={() => navigate(`/projects/${project.slug}`)}
       onMouseEnter={(e) => {
         e.currentTarget.style.borderColor = "var(--color-accent-border)";
         e.currentTarget.style.boxShadow = "0 0 16px var(--color-accent-dim)";
