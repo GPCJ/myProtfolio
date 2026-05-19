@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 :root {
+  --font-inter: 'Inter', system-ui, sans-serif;
+  --font-jetbrains: 'JetBrains Mono', ui-monospace, monospace;
+}
+
+:root {
   --bg-primary: #0d0d0d;
   --bg-secondary: #111111;
   --bg-card: #161616;

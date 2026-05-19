@@ -1,3 +1,16 @@
+import { Routes, Route } from 'react-router-dom';
+import Home from './routes/Home';
+import ProjectDetail from './routes/ProjectDetail';
+import ThemeToggle from '@/components/ui/ThemeToggle';
+
 export default function App() {
-  return <div style={{ padding: 24, color: '#888' }}>Vite scaffold OK</div>;
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/projects/:slug" element={<ProjectDetail />} />
+      </Routes>
+      <ThemeToggle />
+    </>
+  );
 }
