@@ -13,8 +13,8 @@
   --color-accent-dim: rgba(0, 255, 136, 0.15);
   --color-accent-border: rgba(0, 255, 136, 0.3);
   --text-primary: #e5e5e5;
-  --text-secondary: #888888;
-  --text-muted: #767676;
+  --text-secondary: #b8b8b8;
+  --text-muted: #909090;
   --border-color: #1f1f1f;
 }
 
@@ -26,8 +26,8 @@
   --color-accent-dim: rgba(0, 102, 68, 0.12);
   --color-accent-border: rgba(0, 102, 68, 0.35);
   --text-primary: #0f0f0f;
-  --text-secondary: #4a4a4a;
-  --text-muted: #6b6b6b;
+  --text-secondary: #2a2a2a;
+  --text-muted: #4f4f4f;
   --border-color: #d0d0d0;
 }
 

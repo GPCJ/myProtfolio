@@ -57,15 +57,41 @@ function ProjectCard({ project }: { project: (typeof projects)[number] }) {
     >
       {/* 제목 */}
       <h3
-        className="text-lg font-semibold mb-3"
+        className="text-lg font-semibold mb-1.5"
         style={{ color: "var(--text-primary)", fontFamily: "var(--font-jetbrains)" }}
       >
         {project.title}
       </h3>
 
+      {/* status — 제목 아래 한 줄 */}
+      {project.status && (
+        <div
+          className="flex items-center gap-1.5 mb-3"
+          style={{ fontFamily: "var(--font-jetbrains)" }}
+        >
+          <span
+            aria-hidden
+            style={{
+              width: 6,
+              height: 6,
+              borderRadius: "50%",
+              backgroundColor: project.status.active
+                ? "var(--color-accent)"
+                : "var(--text-muted)",
+              boxShadow: project.status.active
+                ? "0 0 6px var(--color-accent)"
+                : "none",
+            }}
+          />
+          <span className="text-xs" style={{ color: "var(--text-muted)" }}>
+            {project.status.label}
+          </span>
+        </div>
+      )}
+
       {/* 설명 */}
       <p
-        className="text-base leading-relaxed mb-4 flex-1"
+        className="text-base leading-relaxed mb-4 flex-1 whitespace-pre-line"
         style={{ color: "var(--text-secondary)" }}
       >
         {project.description}
